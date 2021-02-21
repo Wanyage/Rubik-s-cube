@@ -1,16 +1,21 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+class Cube:
+    """"Class to store the Rubik's cube in a list and its methods to perform operations, initializes itself to a solved
+    Rubik's cube.
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+    """
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    def __init__(self, n: int):
+        self.cube = [[[] for x in range(n)] for x in range(6)]
+
+        for x in range(6):
+            for y in range(n):
+                self.cube[x][y] = [x for i in range(0, n)]
+
+    def centerFlip(self, n: int, orientation: int, direction: int):
+        pass
+
+    def edgeFlip(self, n: int, orientation: int, direction: int):
+        pass
+
+c = Cube(3)
